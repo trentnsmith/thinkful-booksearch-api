@@ -12,7 +12,7 @@ class SearchInput extends Component {
                     <button type="submit" className="search-button"
                     onClick={(e) => {
                         e.preventDefault();
-                        this.props.handleSubmit()
+                        this.props.(fetch(url));
                     }}>
                         Search
                     </button>

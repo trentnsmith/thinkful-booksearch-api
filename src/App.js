@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import SearchInput from './SearchInput';
 import Filters from './Filters';
 import ResultsList from './ResultsList';
-import BookInfo from './BookInfo';
 
 
 
@@ -67,18 +66,12 @@ class App extends Component {
           <h1>Google Book Search</h1>
         </header>
         <section>
-          <form>
-            <label htmlFor='search'>Search:</label>
-            <input type='text' name='search'>
-
-            </input>
-            <button type='submit' >Search</button>
-          </form>
+          <SearchInput />
         </section>
         <section>
           <Filters filter={filter => this.printTypeFilter(filter), this.bookTypeFilter(filter)} />
         </section>
-        <ResultsInfo books={this.state.books} />
+        <ResultsList books={this.state.books} />
       </div>
     );
   }
